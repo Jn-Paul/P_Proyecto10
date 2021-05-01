@@ -13,11 +13,11 @@ const FILES_TO_CACHE = [
   'assets/malo_muerto.png',
   'assets/malo.png',
   'assets/you_win.png',
-  'files/install.js'
+  'files/installer.js'
 ];
 
 self.addEventListener('install', (evt) => {
-  console.log('[ServiceWorker] Install');
+  //console.log('[ServiceWorker] Install');
   // CODELAB: Precache static resources here.
   evt.waitUntil(
       caches.open(CACHE_NAME).then((cache) => {
@@ -51,12 +51,12 @@ self.addEventListener('fetch', (evt) => {
   //   console.log("Fetch no navigate");
   //   return;
   // }
-  console.log('[ServiceWorker] Fetch', evt.request.url);
+//  console.log('[ServiceWorker] Fetch', evt.request.url);
   evt.respondWith(
       caches.open(CACHE_NAME).then((cache) => {
         return cache.match(evt.request)
             .then((response) => {
-              console.log("RESP", response);
+              //console.log("RESP", response);
               return response || fetch(evt.request);
             });
       })
