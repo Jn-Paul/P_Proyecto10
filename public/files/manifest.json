@@ -1,0 +1,30 @@
+{
+    "name": "Game Shoot",
+    "short_name": "Game",
+    "icons": [
+        {
+            "src": "icons/char_192.png",
+            "types": "image/png",
+            "size": "192x192"
+        },
+        {
+            "src": "icons/char_256.png",
+            "size": "256x256",
+            "types": "image/png"
+        },
+        {
+            "src": "icons/char_512.png",
+            "size": "512x512",
+            "types": "image/png"
+        },
+        {
+            "src": "icons/char_640.png",
+            "size": "640x640",
+            "types": "image/png"
+        }
+    ],
+    "start_url":"/index.html",
+    "display": "standalone",
+    "background_color": "#333333",
+    "theme_color": "#6200ee"
+}
